@@ -38,3 +38,26 @@ Shadowing
 Multiple variables of the same variable is often poor style
 
 - often confusing 
+
+Recursion is more powerful, than loops except for the purpose of idioms in other languages
+
+Tuples fixed number of pieces that may have different types
+
+list any number of items of the same type
+
+
+asymptotic runtime analysis or Big O
+
+
+5 things to learn a new language 
+
+Syntax How do you write language constructs 
+
+Semantics what do programs mean (evaluation rules)
+
+Idioms what are typical patterns for using language features to express your computation
+
+Libraries What facilities does the language (or well-known project) provide standard 
+
+Tools What do language implementations provide to make your job easier 
+
