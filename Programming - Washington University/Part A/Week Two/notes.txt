@@ -1,0 +1,40 @@
+Syntax 
+
+how you write something 
+
+    Semantics 
+
+Type Checking 
+
+    Evaluation 
+
+Variable Bindings 
+
+    type check expression and extend static enviroment
+    Evaluate expression and extend dynamic enviroment
+
+ML if condition syntax  
+
+    Syntax 
+
+    if e1 then e2 else e3
+
+    where if then are keywords and e1, e2, and e3 are keywords and e1, e2, and e3 are subexpressions
+
+    type-checking:
+
+    first e1 must have type bool
+    e2 and e3 can have any type t but must have the same type
+    the type of entire expression is t
+
+    Tilde for negation
+
+    / is div in ml
+
+    cannot divide by 0
+
+Shadowing 
+
+Multiple variables of the same variable is often poor style
+
+- often confusing 

@@ -1,0 +1,43 @@
+
+Installation of Emacs 
+
+xcode-select --install
+
+
+##https://stackoverflow.com/questions/30413621/homebrew-cask-option-not-recognized
+brew install --cask smlnj
+
+Bashing Notes 
+
+https://friendly-101.readthedocs.io/en/latest/bashprofile.html#:~:text=The%20Bash%20profile%20is%20a,home%20directory%20with%20the%20name%20.
+
+add to Bash Profile 
+
+export PATH="$PATH:/usr/local/smlnj/bin"
+
+note to self I changed the source command, to match bash_profile was profile 
+
+Execute Emacs commands 
+
+Option x
+
+Split Buffer / and create 
+
+REPL 
+
+A read–eval–print loop (REPL), also termed an interactive toplevel or language shell, is a simple interactive computer programming environment that takes single user inputs, executes them, and returns the result to the user;
+
+C x C c quit emacs
+C g cancel action
+C x C s save file
+C x C f find 
+C 
+
+C w cut a highlighted region 
+C k cut from the cursor to the end of the line
+C y paste yank 
+
+C-x 2: Split the window into 2 buffers, one above the other (Use the mouse or C-x o to switch between them)
+C-x 0: Undo window-splitting so there is only 1 buffer
+C-x b: Switch to another buffer by entering its name
+C-x C-b: See a list of all current buffers
