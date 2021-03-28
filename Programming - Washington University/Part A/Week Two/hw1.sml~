@@ -1,0 +1,7 @@
+
+fun is_older (date: int * int * int, date2: int * int * int) =
+    true
+
+
+
+is_older ((2020,12, 25), (2020, 12, 25));
