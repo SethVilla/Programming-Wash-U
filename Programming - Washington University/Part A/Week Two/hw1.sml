@@ -6,6 +6,19 @@ fun is_older (date: int * int * int, date2: int * int * int) =
     #1 date < #1 date2 orelse  #1 date = #1 date2 andalso #2 date < #2 date2 orelse #1 date = #1 date2 andalso #2 date = #2 date2 andalso #3 date < #3 date2;
 
 
+fun is_older (date1 : int * int * int, date2 : int * int * int) =
+    let 
+        val y1 = #1 date1
+        val m1 = #2 date1
+        val d1 = #3 date1
+        val y2 = #1 date2
+        val m2 = #2 date2
+        val d2 = #3 date2
+    in
+        y1 < y2 orelse (y1=y2 andalso m1 < m2)
+                orelse (y1=y2 andalso m1=m2 andalso d1 < d2)
+    end 
+
 (* 2. Write a function number_in_month that takes a list of dates and a month
  (i.e., an int) and returns how many dates in the list are in the given month. *)
 
@@ -17,6 +30,12 @@ fun number_in_month (dates: (int * int * int) list, month: int) =
     then let val count = 1 + number_in_month(tl dates, month) in count end
     else number_in_month((tl dates), month) 
 
+fun number_in_month (dates : (int * int * int) list, month : int) =
+    if null dates
+    then 0
+    else if #2 (hd dates) = month
+    then 1 + number_in_month(tl dates, month)
+    else number_in_month(tl dates, month) 
 
 (* 3. Write a function number_in_months that takes a list of dates and a list of
  months (i.e., an int list) and returns the number of dates in the list of dates
@@ -28,14 +47,18 @@ fun number_in_months (dates: (int * int * int) list, months: int list ) =
     if null months then 0
     else number_in_month(dates, hd months) + number_in_months (dates, tl months)
 
+
+
 (* 4. Write a function dates_in_month that takes a list of dates and a month
  (i.e., an int) and returns a list holding the dates from the argument list of
  dates that are in the month. The returned list should contain dates in the order
  they were originally given. *)
 							     
 fun dates_in_month (dates: (int * int * int) list, month: int) =
-    if null dates then []
-    else if (#2 (hd dates)) = month then hd dates :: dates_in_month(tl dates, month)
+    if null dates 
+    then []
+    else if (#2 (hd dates)) = month 
+    then hd dates :: dates_in_month(tl dates, month)
     else dates_in_month(tl dates, month)
 
 (* 5. Write a function dates_in_months that takes a list of dates and a list of
